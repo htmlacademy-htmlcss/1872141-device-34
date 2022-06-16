@@ -2,7 +2,7 @@
   font-family: "rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/rubik/rubik-400.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/rubik/rubik-700.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -18,6 +18,174 @@
   font-family: "raleway";
   font-style: normal;
   font-weight: 800;
-  src: url("/fonts/raleway/raleway-800.woff2") format("woff2");
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
+}
+
+body {
+  font-family: "rubik", sans-serif;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.search {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.search_button {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.page_header {
+  background-color: #ffe17f;
+}
+
+.page_header a,
+.main_index a:not(.contacts_phone) {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation_menu_item,
+.slider_more-detailed,
+.index_benefits_button,
+.about-shop_link {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21.13px;
+  text-transform: uppercase;
+}
+
+/*В дальнейшем цвет фона нужно будет убрать.*/
+.slider_number {
+  font-weight: 700;
+  font-size: 180px;
+  color: #ffffff;
+  background-color: #ffe17f;
+}
+
+.slider_promo,
+.index_benefits_item h3,
+.about-shop h3,
+.mailing-list_title {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.slider_text {
+  color: #444444;
+}
+
+.slider_features dt {
+  color: #444444;
+  font-size: 16px;
+}
+
+.slider_features dd {
+  font-size: 36px;
+}
+
+.index_category_item {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.index_benefits_current {
+  color: #ffe17f;
+  background-color: #000000;
+}
+/*Цвет фона в дальнейшем нужно перенести.*/
+.index_benefits_item {
+  color: #444444;
+  background-color: #f0f0f0;
+}
+
+.delivery_wrapper {
+  width: 1160px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.delivery {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23.48px;
+  text-transform: uppercase;
+}
+
+.about-shop p {
+  color: #444444;
+}
+
+.delivery_line_item {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.about-shop h4 {
+  color: #444444;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.contacts_address_text {
+  font-style: normal;
+}
+
+.contacts_phone {
+  color: #444444;
+  font-style: normal;
+}
+
+.contacts_timetable_item {
+  color: #444444;
+}
+
+.mailing-list_form {
+  color: #444444;
+}
+
+.email_button {
+  color: #000000;
+  line-height: 21.13px;
+  text-transform: uppercase;
+}
+
+.footer_index {
+  color: #ffffff;
+  background-color: #444444;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer_address_text {
+  font-style: normal;
+}
+
+.footer_index a:not(.footer_phone) {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer_navigation_item {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21.13px;
+}
+
+.footer_phone {
+  color: #ffffff;
 }
