@@ -189,3 +189,69 @@ body {
 .footer_phone {
   color: #ffffff;
 }
+
+.bread-crumbs h1 {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.main_catalog a:not(.pagination_link) {
+  color: #000000;
+  font-size: 16px;
+  line-height: 18.96px;
+  text-decoration: none;
+}
+
+.catalog_filter h2,
+.select_container h2,
+.pagination_show-more {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18.78px;
+  text-transform: uppercase;
+}
+
+.filter_title {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.filter_item {
+  font-size: 16px;
+  line-height: 18.96px;
+}
+
+.filter_button,
+.pagination_prev,
+.pagination_next {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21.13px;
+  text-transform: uppercase;
+}
+
+.product_card_title {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.product_card_price {
+  font-size: 18px;
+  line-height: 21.33px;
+  color: #444444;
+}
+
+.pagination_button a {
+  color: #000000;
+  line-height: 21.13px;
+  text-decoration: none;
+}
+
+.pagination_item a {
+  color: #444444;
+  font-size: 16px;
+  text-decoration: none;
+}
