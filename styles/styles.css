@@ -50,6 +50,64 @@ body {
   padding: 0;
 }
 
+.header_search-user_container,
+.header_menu_list {
+  display: flex;
+}
+
+.header_search_form {
+  margin-right: 26px;
+}
+
+/*Не пойму, как убрать промежуток между "Полем ввода" и "Кнопкой", поэтому снижен width на 4px (на размер border)*/
+.header_search_form input {
+  width: 353px;
+  padding: 0;
+  background-color: #ffe17f;
+}
+
+.header_search_form button {
+  width: 160px;
+  padding: 0;
+  background-color: #ffe17f;
+}
+
+.log_in {
+  width: 231px;
+  margin: 0 26px;
+}
+
+.navigation_user_list {
+  display: flex;
+  width: 240px;
+  justify-content: space-around;
+  margin-left: auto;
+}
+
+.navigation_menu_list {
+  display: flex;
+  width: 1040px;
+}
+
+.navigation_menu_item:nth-child(1) {
+  width: 293px;
+}
+
+.navigation_menu_item:nth-child(2) {
+  width: 125px;
+  margin-left: auto;
+  margin-right: 47px;
+}
+
+.navigation_menu_item:nth-child(3) {
+  width: 121px;
+  margin-right: 51px;
+}
+
+.navigation_menu_item:nth-child(4) {
+  width: 128px;
+}
+
 .main_index {
   flex-grow: 1;
 }
