@@ -39,10 +39,13 @@ body {
   background-color: #ffffff;
 }
 
+/*хэдер*/
+
 .page_header {
   width: 1040px;
   background-color: #ffe17f;
   padding: 0 60px;
+  margin: 0 auto;
 }
 
 .page_header ul {
@@ -108,10 +111,6 @@ body {
   width: 128px;
 }
 
-.main_index {
-  flex-grow: 1;
-}
-
 .search {
   font-size: 16px;
   line-height: 20px;
@@ -139,16 +138,39 @@ body {
   text-transform: uppercase;
 }
 
-/*В дальнейшем цвет фона нужно будет убрать.*/
+/*мэйн*/
+
+.main_index {
+  flex-grow: 1;
+}
+
+/*Слайдер товаров*/
+
+.main_slider {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.slider_properties_list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.slider_item {
+  display: flex;
+}
+
+/*В будущих разделах обучения следующее свойство будет удалено, когда будет реализован полностью слайдер, его позиционирование и пагинация*/
 .slider_number {
   font-weight: 700;
   font-size: 180px;
   color: #ffffff;
   background-color: #ffe17f;
+  display: none;
 }
 
 .slider_promo,
-.index_benefits_item h3,
+.index_benefits_title,
 .about-shop h3,
 .mailing-list_title {
   font-family: "raleway", sans-serif;
@@ -161,35 +183,92 @@ body {
   color: #444444;
 }
 
+/*Следующие свойства dt/dd будут меняться местами и позиционироваться позже*/
+
 .slider_features dt {
   color: #444444;
   font-size: 16px;
+  min-width: 140px;
+
 }
 
 .slider_features dd {
   font-size: 36px;
+  margin: 0;
+  width: 140px;
+}
+
+/*Секция категорий*/
+
+.index_category {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.index_category_list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
 }
 
 .index_category_item {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   line-height: 24px;
+  width: 160px;
+  margin-right: 40px;
+}
+
+.index_category_item:last-child {
+  margin-right: 0;
+}
+
+/*Слайдер преимуществ магазина*/
+
+.index_benefits {
+  background-color: #f0f0f0;
+}
+.index_benefits_container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/*Отображение h2 отключено до изучения класса visually hidden*/
+.index_benefits h2 {
+  display: none;
+}
+
+.index_benefits_buttons {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .index_benefits_current {
   color: #ffe17f;
   background-color: #000000;
 }
-/*Цвет фона в дальнейшем нужно перенести.*/
+
+.index_benefits_list {
+  list-style-type: none;
+  padding-left: 116px;
+}
+
 .index_benefits_item {
   color: #444444;
-  background-color: #f0f0f0;
 }
 
 .delivery_wrapper {
   width: 1160px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.delivery_block {
   background-color: #f0f0f0;
-  text-align: center;
+  margin: 40px auto;
+
 }
 
 .delivery {
@@ -200,13 +279,34 @@ body {
   text-transform: uppercase;
 }
 
+.delivery_line_item {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/*Секция информации*/
+
+.about-shop {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.about-shop .visualy-hiden {
+  display: none;
+}
+
 .about-shop p {
   color: #444444;
 }
 
-.delivery_line_item {
-  font-weight: 700;
-  line-height: 20px;
+.about-us_wrapper {
+  width: 520px;
+  margin-right: 108px;
+}
+/*Нужно ли задавать строгую ширину мелким блокам, если они занимают строки как в макете (следующее свойство пример этого)? */
+.about-us {
+  width: 145px;
 }
 
 .about-shop h4 {
@@ -228,28 +328,101 @@ body {
   color: #444444;
 }
 
-.mailing-list_form {
-  color: #444444;
+/*Рассылка*/
+
+.mailing_container {
+  background-color: #f0f0f0;
+}
+
+.mailing_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.mailing_text_block {
+  display: flex;
+}
+
+.mailing-list_title {
+  width: 348px;
+  margin-right: 252px;
+}
+
+/* Если задаю обращение по классу (mailing_email), то цвет фона подя для ввода текста не меняется. Т.е. можно менять цвет только всей формы, а отдельно поля для ввода текста нельзя? */
+.mailing-list_form input {
+  background-color: #f0f0f0;
+  width: 547px;
+  padding: 0 0 0 10px;
+  border: none;
 }
 
 .email_button {
+  width: 253px;
+  margin-right: 190px;
+}
+
+.email_button strong{
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
   color: #000000;
   line-height: 21px;
   text-transform: uppercase;
 }
 
-.footer_index {
+/*Футер*/
+
+.page_footer {
   color: #ffffff;
   background-color: #444444;
   font-size: 16px;
   line-height: 20px;
 }
 
+.page_footer_container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer_address {
+  width: 234px;
+}
+
 .footer_address_text {
   font-style: normal;
 }
 
-.footer_index a:not(.footer_phone) {
+.footer_nav-social_block {
+  width: 444px;
+}
+
+.footer_navigation_list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.footer_navigation_item:nth-child(1) {
+  width: 125px;
+}
+
+.footer_navigation_item:nth-child(2) {
+  width: 121px;
+}
+
+.footer_navigation_item:nth-child(3) {
+  width: 128px;
+}
+
+.footer_other {
+  width: 175px;
+}
+
+.page_footer a:not(.footer_phone) {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
