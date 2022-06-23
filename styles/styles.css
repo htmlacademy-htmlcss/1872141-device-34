@@ -22,14 +22,96 @@
   font-display: swap;
 }
 
-body {
-  font-family: "rubik", sans-serif;
+html {
+  height: 100%;
+}
 
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
   background-color: #ffffff;
+}
+
+/*хэдер*/
+
+.page_header {
+  width: 1040px;
+  background-color: #ffe17f;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+.page_header ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.header_search-user_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_menu_list {
+  display: flex;
+}
+
+.header_search_form {
+  margin-right: 26px;
+  display: flex;
+}
+
+.header_search_form input {
+  width: 353px;
+  padding: 0;
+  background-color: #ffe17f;
+}
+
+.header_search_form button {
+  width: 160px;
+  padding: 0;
+  background-color: #ffe17f;
+}
+
+.log_in {
+  width: 231px;
+  margin: 0 26px;
+}
+
+.navigation_user_list {
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+}
+
+.navigation_menu_list {
+  display: flex;
+  width: 1040px;
+}
+
+.navigation_menu_item:nth-child(1) {
+  width: 293px;
+}
+
+.navigation_menu_item:nth-child(2) {
+  width: 125px;
+  margin-left: auto;
+  margin-right: 47px;
+}
+
+.navigation_menu_item:nth-child(3) {
+  width: 121px;
+  margin-right: 51px;
+}
+
+.navigation_menu_item:nth-child(4) {
+  width: 128px;
 }
 
 .search {
@@ -41,10 +123,6 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-}
-
-.page_header {
-  background-color: #ffe17f;
 }
 
 .page_header a,
@@ -59,20 +137,43 @@ body {
 .about-shop_link {
   font-family: "raleway", sans-serif;
   font-weight: 800;
-  line-height: 21.13px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
-/*В дальнейшем цвет фона нужно будет убрать.*/
+/*мэйн*/
+
+.main_index {
+  flex-grow: 1;
+}
+
+/*Слайдер товаров*/
+
+.main_slider {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.slider_properties_list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.slider_item {
+  display: flex;
+}
+
+/*В будущих разделах обучения следующее свойство будет удалено, когда будет реализован полностью слайдер, его позиционирование и пагинация*/
 .slider_number {
   font-weight: 700;
   font-size: 180px;
   color: #ffffff;
   background-color: #ffe17f;
+  display: none;
 }
 
 .slider_promo,
-.index_benefits_item h3,
+.index_benefits_title,
 .about-shop h3,
 .mailing-list_title {
   font-family: "raleway", sans-serif;
@@ -85,52 +186,124 @@ body {
   color: #444444;
 }
 
+/*Следующие свойства dt/dd будут меняться местами и позиционироваться позже*/
+
 .slider_features dt {
   color: #444444;
   font-size: 16px;
+  min-width: 140px;
+
 }
 
 .slider_features dd {
   font-size: 36px;
+  margin: 0;
+  width: 140px;
+}
+
+/*Секция категорий*/
+
+.index_category {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.index_category_list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
 }
 
 .index_category_item {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   line-height: 24px;
+  width: 160px;
+  margin-right: 40px;
+}
+
+.index_category_item:last-child {
+  margin-right: 0;
+}
+
+/*Слайдер преимуществ магазина*/
+
+.index_benefits {
+  background-color: #f0f0f0;
+}
+.index_benefits_container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/*Отображение h2 отключено до изучения класса visually hidden*/
+.index_benefits h2 {
+  display: none;
+}
+
+.index_benefits_buttons {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .index_benefits_current {
   color: #ffe17f;
   background-color: #000000;
 }
-/*Цвет фона в дальнейшем нужно перенести.*/
+
+.index_benefits_list {
+  list-style-type: none;
+  padding-left: 116px;
+}
+
 .index_benefits_item {
   color: #444444;
-  background-color: #f0f0f0;
 }
 
 .delivery_wrapper {
   width: 1160px;
+  height: 110px;
+  display: flex;
+  margin: 70px auto;
   background-color: #f0f0f0;
-  text-align: center;
 }
 
 .delivery {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
-  line-height: 23.48px;
+  line-height: 24px;
   text-transform: uppercase;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.delivery_line_item {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/*Секция информации*/
+
+.about-shop {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.about-shop .visualy-hiden {
+  display: none;
 }
 
 .about-shop p {
   color: #444444;
 }
 
-.delivery_line_item {
-  font-weight: 700;
-  line-height: 20px;
+.about-us_wrapper {
+  width: 520px;
+  margin-right: 108px;
 }
 
 .about-shop h4 {
@@ -152,28 +325,100 @@ body {
   color: #444444;
 }
 
-.mailing-list_form {
-  color: #444444;
+/*Рассылка*/
+
+.mailing_container {
+  background-color: #f0f0f0;
+}
+
+.mailing_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.mailing_text_block {
+  display: flex;
+}
+
+.mailing-list_title {
+  width: 348px;
+  margin-right: 252px;
+}
+
+.mailing-list_form input {
+  background-color: #f0f0f0;
+  width: 547px;
+  padding: 0 0 0 10px;
+  border: none;
 }
 
 .email_button {
+  width: 253px;
+  margin-right: 190px;
+}
+
+.email_button strong{
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
   color: #000000;
-  line-height: 21.13px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
-.footer_index {
+/*Футер*/
+
+.page_footer {
   color: #ffffff;
   background-color: #444444;
   font-size: 16px;
   line-height: 20px;
 }
 
+.page_footer_container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer_address {
+  width: 234px;
+}
+
 .footer_address_text {
   font-style: normal;
 }
 
-.footer_index a:not(.footer_phone) {
+.footer_nav-social_block {
+  width: 444px;
+}
+
+.footer_navigation_list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.footer_navigation_item:nth-child(1) {
+  width: 125px;
+}
+
+.footer_navigation_item:nth-child(2) {
+  width: 121px;
+}
+
+.footer_navigation_item:nth-child(3) {
+  width: 128px;
+}
+
+.footer_other {
+  width: 175px;
+}
+
+.page_footer a:not(.footer_phone) {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -183,11 +428,36 @@ body {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 21.13px;
+  line-height: 21px;
 }
 
 .footer_phone {
   color: #ffffff;
+}
+
+/* Дополнения в хэдер страницы каталога */
+
+.user-name {
+  width: 146px;
+  margin-right: 28px;
+}
+
+.log_out {
+  width: 97px;
+}
+
+/* мэйн страницы каталога */
+
+.main_catalog a:not(.pagination_link) {
+  color: #000000;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+}
+
+.bread-crumbs {
+  margin: 0 auto;
+  width: 1040px;
 }
 
 .bread-crumbs h1 {
@@ -197,11 +467,26 @@ body {
   line-height: 50px;
 }
 
-.main_catalog a:not(.pagination_link) {
-  color: #000000;
-  font-size: 16px;
-  line-height: 18.96px;
-  text-decoration: none;
+.bread-crumbs_list {
+  display: flex;
+  gap: 36px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main_background_container {
+  background-color: #f0f0f0;
+}
+
+.main_catalog_wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.catalog_filter {
+  width: 200px;
+  margin: 35px 60px;
 }
 
 .catalog_filter h2,
@@ -210,7 +495,7 @@ body {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
-  line-height: 18.78px;
+  line-height: 19px;
   text-transform: uppercase;
 }
 
@@ -221,7 +506,7 @@ body {
 
 .filter_item {
   font-size: 16px;
-  line-height: 18.96px;
+  line-height: 19px;
 }
 
 .filter_button,
@@ -229,24 +514,106 @@ body {
 .pagination_next {
   font-family: "raleway", sans-serif;
   font-weight: 800;
-  line-height: 21.13px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
-.product_card_title {
-  font-weight: 700;
-  line-height: 20px;
+.select_product-page_container {
+  width: 840px;
 }
 
-.product_card_price {
+.select_wrapper {
+  display: flex;
+  margin-left: 40px;
+  justify-content: space-between;
+}
+
+.select_control {
+  background-color: #f0f0f0;
+  width: 141px;
+}
+
+.product-page_monopod {
+  background-color: #ffffff;
+}
+
+.product-page_monopod h2 {
+  display: none;
+}
+
+.product_monopod_list {
+  display: flex;
+  width: 760px;
+  gap: 70px 40px;
+  flex-wrap: wrap;
+  padding: 70px 40px 44px;
+  list-style-type: none;
+}
+
+.product-card_text {
+  display: flex;
+  width: 360px;
+  justify-content: space-between;
+}
+
+.product-card_title {
+  font-weight: 700;
+  line-height: 20px;
+  width: 226px;
+}
+
+.product-card_price {
   font-size: 18px;
-  line-height: 21.33px;
+  line-height: 21px;
   color: #444444;
+  align-self: center;
+}
+
+.pagination_container {
+  display: flex;
+  flex-direction: column;
+  margin: 44px 40px 78px;
+  gap: 44px;
+}
+
+.pagination_show-more {
+  width: 760px;
+
+  background-color: #ffffff;
+  border: 3px solid #e5e5e5;
+}
+
+.pagination_wrapper {
+  display: flex;
+  width: 760px;
+  background-color: #ebebeb;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination_list {
+  display: flex;
+  width: 200px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.pagination_item {
+  width: 40px;
+}
+
+.pagination_prev,
+.pagination_next {
+  width: 128px;
+  padding: 25px;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
 }
 
 .pagination_button a {
   color: #000000;
-  line-height: 21.13px;
+  line-height: 21px;
   text-decoration: none;
 }
 
