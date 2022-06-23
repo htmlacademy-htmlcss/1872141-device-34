@@ -64,9 +64,9 @@ body {
 
 .header_search_form {
   margin-right: 26px;
+  display: flex;
 }
 
-/*Не пойму, как убрать промежуток между "Полем ввода" и "Кнопкой", поэтому снижен width на 4px (на размер border)*/
 .header_search_form input {
   width: 353px;
   padding: 0;
@@ -264,14 +264,10 @@ body {
 
 .delivery_wrapper {
   width: 1160px;
+  height: 110px;
   display: flex;
-  margin: 0 auto;
-}
-
-.delivery_block {
+  margin: 70px auto;
   background-color: #f0f0f0;
-  margin: 40px auto;
-
 }
 
 .delivery {
@@ -280,6 +276,8 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
+  align-self: center;
+  margin: 0 auto;
 }
 
 .delivery_line_item {
@@ -306,10 +304,6 @@ body {
 .about-us_wrapper {
   width: 520px;
   margin-right: 108px;
-}
-/*Нужно ли задавать строгую ширину мелким блокам, если они занимают строки как в макете (следующее свойство пример этого)? */
-.about-us {
-  width: 145px;
 }
 
 .about-shop h4 {
@@ -353,7 +347,6 @@ body {
   margin-right: 252px;
 }
 
-/* Если задаю обращение по классу (mailing_email), то цвет фона подя для ввода текста не меняется. Т.е. можно менять цвет только всей формы, а отдельно поля для ввода текста нельзя? */
 .mailing-list_form input {
   background-color: #f0f0f0;
   width: 547px;
