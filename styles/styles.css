@@ -39,6 +39,17 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*хэдер*/
 
 .page_header {
@@ -237,11 +248,6 @@ body {
   margin: 0 auto;
 }
 
-/*Отображение h2 отключено до изучения класса visually hidden*/
-.index_benefits h2 {
-  display: none;
-}
-
 .index_benefits_buttons {
   width: 280px;
   display: flex;
@@ -291,10 +297,6 @@ body {
   display: flex;
   width: 1160px;
   margin: 0 auto;
-}
-
-.about-shop .visualy-hiden {
-  display: none;
 }
 
 .about-shop p {
@@ -535,10 +537,6 @@ body {
 
 .product-page_monopod {
   background-color: #ffffff;
-}
-
-.product-page_monopod h2 {
-  display: none;
 }
 
 .product_monopod_list {
