@@ -89,6 +89,7 @@ body {
   width: 357px;
   height: 40px;
   padding: 0;
+  padding-left: 48px;
   background-color: #ffe17f;
   border: 2px solid #000000;
   border-radius: 50px 0 0 50px;
@@ -643,6 +644,7 @@ body {
 
 .user-name {
   width: 146px;
+  margin-left: 53px;
   margin-right: 28px;
 }
 
@@ -669,12 +671,14 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+  margin: 35px 0 16px;
 }
 
 .bread-crumbs_list {
   display: flex;
   gap: 36px;
   padding: 0;
+  margin: 0 0 35px;
   list-style-type: none;
 }
 
@@ -728,13 +732,20 @@ body {
 
 .select_wrapper {
   display: flex;
-  margin-left: 40px;
+  min-width: 760px;
+  height: 70px;
+  margin: 0 40px;
   justify-content: space-between;
 }
 
 .select_control {
   background-color: #f0f0f0;
   width: 141px;
+  border: none;
+}
+
+.sort-up_arrow_container {
+  width: 60px;
 }
 
 .product-page_monopod {
@@ -748,6 +759,7 @@ body {
   flex-wrap: wrap;
   padding: 70px 40px 44px;
   list-style-type: none;
+  margin: 0;
 }
 
 .product-card_text {
@@ -772,12 +784,13 @@ body {
 .pagination_container {
   display: flex;
   flex-direction: column;
-  margin: 44px 40px 78px;
+  margin: 44px 40px 0;
   gap: 44px;
 }
 
 .pagination_show-more {
   width: 760px;
+  height: 55px;
 
   background-color: #ffffff;
   border: 3px solid #e5e5e5;
@@ -789,6 +802,7 @@ body {
   background-color: #ebebeb;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 78px;
 }
 
 .pagination_list {
