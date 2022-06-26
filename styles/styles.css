@@ -54,9 +54,10 @@ body {
 
 .page_header {
   width: 1040px;
+  height: 300px;
   background-color: #ffe17f;
   padding: 0 60px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
 .page_header ul {
@@ -67,62 +68,95 @@ body {
 .header_search-user_container {
   display: flex;
   justify-content: space-between;
+  margin: 30px 0;
 }
 
 .header_menu_list {
   display: flex;
+  align-items: center;
+}
+
+.header_search {
+  width: 517px;
+
 }
 
 .header_search_form {
-  margin-right: 26px;
   display: flex;
 }
 
 .header_search_form input {
-  width: 353px;
+  width: 357px;
+  height: 40px;
   padding: 0;
   background-color: #ffe17f;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
 }
 
 .header_search_form button {
   width: 160px;
   padding: 0;
   background-color: #ffe17f;
+  border: 2px solid #000000;
+  border-radius:  0 50px 50px 0;
+  border-left: none;
 }
 
-.log_in {
+.header_menu_log-in {
   width: 231px;
-  margin: 0 26px;
+  height: 40px;
+}
+
+.log-in {
+  display: block;
+  height: 30px;
+  padding: 5px 26px;
 }
 
 .navigation_user_list {
   display: flex;
+  flex-wrap: wrap;
   width: 240px;
   justify-content: space-between;
+  align-items: center;
+}
+
+.navigation_user_item {
+  display: block;
+  min-width: 83px;
 }
 
 .navigation_menu_list {
   display: flex;
+  flex-wrap: wrap;
   width: 1040px;
+  height: 50px;
+  margin: 0;
+
 }
 
-.navigation_menu_item:nth-child(1) {
+.navigation_menu_item:first-child {
   width: 293px;
+  margin-right: auto;
+  display: block;
+  padding: 15px 0;
 }
 
-.navigation_menu_item:nth-child(2) {
-  width: 125px;
-  margin-left: auto;
-  margin-right: 47px;
+/* Усреднил расстояние между элементами списка до 49px */
+.navigation_menu_item {
+  min-width: 128px;
+  display: block;
+  padding: 15px 0;
+  margin-right: 49px;
+  margin-bottom: 20px;
+  text-align: end;
 }
 
-.navigation_menu_item:nth-child(3) {
-  width: 121px;
-  margin-right: 51px;
-}
-
-.navigation_menu_item:nth-child(4) {
-  width: 128px;
+/* Пока сделал так, но скорее всего нужно будет в дальнейшем выносить певый li с ссылкой на страницу каталога из списка */
+.navigation_menu_item:last-child,
+.navigation_menu_item:nth-child(5n) {
+  margin-right: 0;
 }
 
 .search {
