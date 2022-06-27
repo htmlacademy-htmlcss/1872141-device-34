@@ -39,13 +39,25 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*хэдер*/
 
 .page_header {
   width: 1040px;
+  min-height: 300px;
   background-color: #ffe17f;
   padding: 0 60px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
 .page_header ul {
@@ -56,62 +68,96 @@ body {
 .header_search-user_container {
   display: flex;
   justify-content: space-between;
+  margin: 30px 0;
 }
 
 .header_menu_list {
   display: flex;
+  align-items: center;
+}
+
+.header_search {
+  width: 517px;
+
 }
 
 .header_search_form {
-  margin-right: 26px;
   display: flex;
 }
 
 .header_search_form input {
-  width: 353px;
+  width: 357px;
+  height: 40px;
   padding: 0;
+  padding-left: 48px;
   background-color: #ffe17f;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
 }
 
 .header_search_form button {
   width: 160px;
   padding: 0;
   background-color: #ffe17f;
+  border: 2px solid #000000;
+  border-radius:  0 50px 50px 0;
+  border-left: none;
 }
 
-.log_in {
+.header_menu_log-in {
   width: 231px;
-  margin: 0 26px;
+  height: 40px;
+}
+
+.log-in {
+  display: block;
+  height: 30px;
+  padding: 5px 26px;
 }
 
 .navigation_user_list {
   display: flex;
+  flex-wrap: wrap;
   width: 240px;
   justify-content: space-between;
+  align-items: center;
+}
+
+.navigation_user_item {
+  display: block;
+  min-width: 83px;
 }
 
 .navigation_menu_list {
   display: flex;
+  flex-wrap: wrap;
   width: 1040px;
+  height: 50px;
+  margin: 0;
+
 }
 
-.navigation_menu_item:nth-child(1) {
+.navigation_menu_item:first-child {
   width: 293px;
+  margin-right: auto;
+  display: block;
+  padding: 15px 0;
 }
 
-.navigation_menu_item:nth-child(2) {
-  width: 125px;
-  margin-left: auto;
-  margin-right: 47px;
+/* Усреднил расстояние между элементами списка до 49px */
+.navigation_menu_item {
+  min-width: 128px;
+  display: block;
+  padding: 15px 0;
+  margin-right: 49px;
+  margin-bottom: 20px;
+  text-align: end;
 }
 
-.navigation_menu_item:nth-child(3) {
-  width: 121px;
-  margin-right: 51px;
-}
-
-.navigation_menu_item:nth-child(4) {
-  width: 128px;
+/* Пока сделал так, но скорее всего нужно будет в дальнейшем выносить певый li с ссылкой на страницу каталога из списка */
+.navigation_menu_item:last-child,
+.navigation_menu_item:nth-child(5n) {
+  margin-right: 0;
 }
 
 .search {
@@ -132,7 +178,6 @@ body {
 }
 
 .navigation_menu_item,
-.slider_more-detailed,
 .index_benefits_button,
 .about-shop_link {
   font-family: "raleway", sans-serif;
@@ -163,13 +208,24 @@ body {
   display: flex;
 }
 
-/*В будущих разделах обучения следующее свойство будет удалено, когда будет реализован полностью слайдер, его позиционирование и пагинация*/
+/* В будущих разделах обучения следующие два свойства будут удалены/изменены, когда будет реализован полностью слайдер, его позиционирование и пагинация */
+
+.slider_pagination,
+.slider_button_arrows {
+  display: none;
+}
+
 .slider_number {
   font-weight: 700;
   font-size: 180px;
   color: #ffffff;
   background-color: #ffe17f;
   display: none;
+}
+
+.slider_text_wrapper {
+  width: 560px;
+  margin-left: 40px;
 }
 
 .slider_promo,
@@ -182,23 +238,40 @@ body {
   line-height: 50px;
 }
 
+.slider_promo {
+  margin: 0;
+  margin-top: 121px;
+}
+
 .slider_text {
+  margin: 29px 0 51px;
   color: #444444;
 }
 
-/*Следующие свойства dt/dd будут меняться местами и позиционироваться позже*/
+/* Следующие свойства dt/dd будут меняться местами и позиционироваться позже... Скорее всего на гридах. Как сделать это на флексах не могу придумать. */
 
 .slider_features dt {
   color: #444444;
   font-size: 16px;
   min-width: 140px;
-
 }
 
 .slider_features dd {
   font-size: 36px;
   margin: 0;
   width: 140px;
+}
+
+.slider_more-detailed {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+  display: block;
+  width: 220px;
+  height: 20px;
+  text-align: center;
+  padding: 10px 5px;
 }
 
 /*Секция категорий*/
@@ -210,8 +283,10 @@ body {
 
 .index_category_list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
+  margin-top: 70px;
 }
 
 .index_category_item {
@@ -219,10 +294,13 @@ body {
   font-weight: 800;
   line-height: 24px;
   width: 160px;
+  height: 60px;
+  padding-top: 192px;
   margin-right: 40px;
+  margin-bottom: 70px;
 }
 
-.index_category_item:last-child {
+.index_category_item:nth-child(6n) {
   margin-right: 0;
 }
 
@@ -237,15 +315,14 @@ body {
   margin: 0 auto;
 }
 
-/*Отображение h2 отключено до изучения класса visually hidden*/
-.index_benefits h2 {
-  display: none;
-}
-
 .index_benefits_buttons {
   width: 280px;
   display: flex;
   flex-direction: column;
+}
+
+.index_benefits_button {
+  padding: 0;
 }
 
 .index_benefits_current {
@@ -256,10 +333,19 @@ body {
 .index_benefits_list {
   list-style-type: none;
   padding-left: 116px;
+  margin: 0;
 }
 
 .index_benefits_item {
   color: #444444;
+}
+
+.index_benefits_title {
+  margin: 73px 0 34px;
+}
+
+.index_benefits_text {
+  margin: 0;
 }
 
 .delivery_wrapper {
@@ -280,9 +366,18 @@ body {
   margin: 0 auto;
 }
 
+.delivery_line_list {
+  padding-left: 34px;
+}
+
 .delivery_line_item {
   font-weight: 700;
   line-height: 20px;
+  margin-bottom: 19px;
+}
+
+.delivery_line_item:last-child {
+  margin-bottom: 40px;
 }
 
 /*Секция информации*/
@@ -293,17 +388,43 @@ body {
   margin: 0 auto;
 }
 
-.about-shop .visualy-hiden {
-  display: none;
-}
-
-.about-shop p {
-  color: #444444;
-}
-
 .about-us_wrapper {
   width: 520px;
   margin-right: 108px;
+}
+
+.about-us {
+  width: 520px;
+  margin: 40px 0 48px;
+}
+
+.about-us_text {
+  width: 497px;
+  color: #444444;
+}
+
+.about-us_link {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+  display: block;
+  width: 258px;
+  height: 20px;
+  padding: 10px 6px;
+}
+
+.contacts_wrapper {
+  width: 532px;
+}
+
+.contacts {
+  margin: 40px 0 48px;
+
+}
+
+.contacts_text {
+  margin: 0;
 }
 
 .about-shop h4 {
@@ -312,7 +433,12 @@ body {
   font-size: 24px;
 }
 
+.contacts_subtitle {
+  margin: 30px 0 15px;
+}
+
 .contacts_address_text {
+  margin: 0;
   font-style: normal;
 }
 
@@ -321,8 +447,21 @@ body {
   font-style: normal;
 }
 
+.contacts_timetable_list {
+  padding: 0;
+  list-style-type: none;
+}
+
 .contacts_timetable_item {
   color: #444444;
+}
+
+.about-shop_link {
+  display: block;
+  width: 247px;
+  height: 20px;
+  padding: 10px 6px;
+  margin-bottom: 70px;
 }
 
 /*Рассылка*/
@@ -345,18 +484,35 @@ body {
 .mailing-list_title {
   width: 348px;
   margin-right: 252px;
+  margin-top: 64px;
+  margin-bottom: 144px;
+}
+
+.mailing-list_text {
+  margin-top: 64px;
+  margin-bottom: 144px;
+}
+
+.mailing-list_form {
+  display: flex;
 }
 
 .mailing-list_form input {
   background-color: #f0f0f0;
-  width: 547px;
-  padding: 0 0 0 10px;
+  width: 541px;
+  height: 52px;
+  padding: 0 0 0 16px;
   border: none;
+  border-bottom: 3px solid #c4c4c4;
+  margin-bottom: 56px;
 }
 
 .email_button {
   width: 253px;
+  height: 55px;
+  border: 3px solid #c4c4c4;
   margin-right: 190px;
+  padding: 0;
 }
 
 .email_button strong{
@@ -365,6 +521,14 @@ body {
   color: #000000;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+.mailing-list_form span {
+  width: 160px;
+  height: 30px;
+  padding: 13px 0 14px;
+  margin-bottom: 56px;
+  text-align: end;
 }
 
 /*Футер*/
@@ -383,12 +547,18 @@ body {
   justify-content: space-between;
 }
 
+.footer_logo {
+  margin-top: 62px;
+  margin-bottom: 35px;
+}
+
 .footer_address {
   width: 234px;
 }
 
 .footer_address_text {
   font-style: normal;
+  margin-bottom: 64px;
 }
 
 .footer_nav-social_block {
@@ -414,14 +584,39 @@ body {
   width: 128px;
 }
 
+.footer_social_list {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 61px;
+}
+
+.footer_social_item {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.footer_social_item:last-child {
+  margin-right: 15px;
+}
+
 .footer_other {
   width: 175px;
+  height: 116px;
 }
 
 .page_footer a:not(.footer_phone) {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.footer_navigation_list {
+  margin-top: 137px;
+  margin-bottom: 62px;
 }
 
 .footer_navigation_item {
@@ -432,13 +627,22 @@ body {
 }
 
 .footer_phone {
+  display: block;
   color: #ffffff;
+  margin-top: 140px;
+  margin-bottom: 63px;
+}
+
+.footer_htmlacademy_link {
+  display: block;
+  text-align: end;
 }
 
 /* Дополнения в хэдер страницы каталога */
 
 .user-name {
   width: 146px;
+  margin-left: 53px;
   margin-right: 28px;
 }
 
@@ -465,12 +669,14 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+  margin: 35px 0 16px;
 }
 
 .bread-crumbs_list {
   display: flex;
   gap: 36px;
   padding: 0;
+  margin: 0 0 35px;
   list-style-type: none;
 }
 
@@ -524,21 +730,24 @@ body {
 
 .select_wrapper {
   display: flex;
-  margin-left: 40px;
+  min-width: 760px;
+  height: 70px;
+  margin: 0 40px;
   justify-content: space-between;
 }
 
 .select_control {
   background-color: #f0f0f0;
   width: 141px;
+  border: none;
+}
+
+.sort-up_arrow_container {
+  width: 60px;
 }
 
 .product-page_monopod {
   background-color: #ffffff;
-}
-
-.product-page_monopod h2 {
-  display: none;
 }
 
 .product_monopod_list {
@@ -548,6 +757,7 @@ body {
   flex-wrap: wrap;
   padding: 70px 40px 44px;
   list-style-type: none;
+  margin: 0;
 }
 
 .product-card_text {
@@ -572,12 +782,13 @@ body {
 .pagination_container {
   display: flex;
   flex-direction: column;
-  margin: 44px 40px 78px;
+  margin: 44px 40px 0;
   gap: 44px;
 }
 
 .pagination_show-more {
   width: 760px;
+  height: 55px;
 
   background-color: #ffffff;
   border: 3px solid #e5e5e5;
@@ -589,6 +800,7 @@ body {
   background-color: #ebebeb;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 78px;
 }
 
 .pagination_list {
