@@ -54,7 +54,7 @@ body {
 
 .page_header {
   width: 1040px;
-  height: 300px;
+  min-height: 300px;
   background-color: #ffe17f;
   padding: 0 60px;
   margin: 40px auto 0;
@@ -423,10 +423,8 @@ body {
 
 }
 
-/* Увеличил width на 2 пикселя, чтобы перенос текста был как в макете. Или это будет достигаться потом при шлифовке? */
 .contacts_text {
   margin: 0;
-  width: 498px;
 }
 
 .about-shop h4 {
