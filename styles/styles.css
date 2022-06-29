@@ -134,7 +134,6 @@ body {
   width: 1040px;
   height: 50px;
   margin: 0;
-
 }
 
 .navigation_menu_item:first-child {
@@ -151,6 +150,9 @@ body {
   padding: 15px 0;
   margin-right: 49px;
   margin-bottom: 20px;
+}
+
+.navigation_menu_item:last-child {
   text-align: end;
 }
 
@@ -282,11 +284,12 @@ body {
 }
 
 .index_category_list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  gap: 40px;
   list-style-type: none;
   padding: 0;
-  margin-top: 70px;
+  margin: 70px 0;
 }
 
 .index_category_item {
@@ -296,12 +299,6 @@ body {
   width: 160px;
   height: 60px;
   padding-top: 192px;
-  margin-right: 40px;
-  margin-bottom: 70px;
-}
-
-.index_category_item:nth-child(6n) {
-  margin-right: 0;
 }
 
 /*Слайдер преимуществ магазина*/
