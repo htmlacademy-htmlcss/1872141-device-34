@@ -7,31 +7,34 @@
   </head>
   <body>
     <header class="page_header">
-      <a class="logo" href="index.html"><img src="./images/logo_device.svg"  width="145" height="36" alt="Логотип интернет-магазина Device."></a>
-      <div class="header_search-user_container">
-        <ul class="header_menu_list">
-          <li class="header_search">
-            <form class="header_search_form" action="https://echo.htmlacademy.ru/">
-              <input type="search" id="search_input" placeholder="Текст поиска">
-              <button class="search_buttun" type="submit">Найти</button>
-            </form>
-          </li>
-          <li><a class="user-name" href="#">Коля Петухов</a></li>
-          <li><a class="log-out" href="#">Выйти</a></li>
-        </ul>
-        <ul class="navigation_user_list">
-          <li class="navigation_user_item"><a href="#">Сравнить</a></li>
-          <li class="navigation_user_item"><a href="#">Корзина</a></li>
-        </ul>
+      <div class="page_header_container">
+        <a class="logo" href="index.html"><img src="./images/logo_device.svg"  width="145" height="36" alt="Логотип интернет-магазина Device."></a>
+        <div class="header_search-user_container">
+          <ul class="header_menu_list">
+            <li class="header_search">
+              <svg class="header_search_icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.7 14.69-3.1-3.1c.9-1.2 1.4-2.6 1.4-4.2 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7.39c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .39)" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+              <form class="header_search_form" action="https://echo.htmlacademy.ru/">
+                <input type="search" id="search_input" placeholder="Текст поиска">
+                <button class="search_button" type="submit">Найти</button>
+              </form>
+            </li>
+            <li class="header_menu_log-in"><a class="log-in user-name" href="#"><svg class="header_menu_icon" aria-hidden="true" focusable="false" width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12h13a6.3 6.3 0 0 0-4.7-5.5c1-.6 1.7-1.7 1.7-3C10 1.6 8.4 0 6.5 0S3 1.6 3 3.5c0 1.3.7 2.4 1.7 3A6.3 6.3 0 0 0 0 12Z" fill="#000"/></svg></svg>Коля Петухов</a></li>
+            <li><a class="log-out" href="#">Выйти</a></li>
+          </ul>
+          <ul class="navigation_user_list">
+            <li class="navigation_user_item"><a href="#"><svg class="header_menu_icon" aria-hidden="true" focusable="false" width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 .389H4v12h2v-12ZM2 4.389H0v8h2v-8ZM10 3.389H8v9h2v-9Z" fill="#000"/></svg>Сравнить</a></li>
+            <li class="navigation_user_item"><a href="#"><svg class="header_menu_icon" aria-hidden="true" focusable="false" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5.39-3.5.2L8.6.69c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.29l2.2 3.2H5.9L8 2.29Z" fill="#000"/></svg>Корзина</a></li>
+          </ul>
+        </div>
+        <nav class="navigation_menu">
+          <ul class="navigation_menu_list">
+            <li class="navigation_menu_item"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="navigation_menu_item"><a href="#">Доставка</a></li>
+            <li class="navigation_menu_item"><a href="#">Гарантия</a></li>
+            <li class="navigation_menu_item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="navigation_menu">
-        <ul class="navigation_menu_list">
-          <li class="navigation_menu_item"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="navigation_menu_item"><a href="#">Доставка</a></li>
-          <li class="navigation_menu_item"><a href="#">Гарантия</a></li>
-          <li class="navigation_menu_item"><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
     </header>
     <main class="main_catalog">
       <section class="bread-crumbs">

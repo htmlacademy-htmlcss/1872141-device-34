@@ -54,10 +54,21 @@ body {
 
 .page_header {
   width: 1040px;
+  position: relative;
   min-height: 300px;
   background-color: #ffe17f;
   padding: 0 60px;
   margin: 40px auto 0;
+}
+
+.page_header_container {
+  position: absolute;
+  top: -21px;
+}
+
+.logo img{
+  display: block;
+  margin: 0;
 }
 
 .page_header ul {
@@ -78,11 +89,20 @@ body {
 
 .header_search {
   width: 517px;
-
+  position: relative;
 }
 
 .header_search_form {
   display: flex;
+
+}
+
+.header_search_icon {
+  position: absolute;
+  color: #000000;
+  z-index: 1;
+  left: 17px;
+  top: 12px;
 }
 
 .header_search_form input {
@@ -105,7 +125,6 @@ body {
 }
 
 .header_menu_log-in {
-  width: 231px;
   height: 40px;
 }
 
@@ -113,6 +132,10 @@ body {
   display: block;
   height: 30px;
   padding: 5px 26px;
+}
+
+.header_menu_icon {
+  padding-right: 12px;
 }
 
 .navigation_user_list {
@@ -639,12 +662,15 @@ body {
 
 .user-name {
   width: 146px;
-  margin-left: 53px;
+  margin-left: 25px;
   margin-right: 28px;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .log_out {
-  width: 97px;
+  width: 57px;
 }
 
 /* мэйн страницы каталога */
