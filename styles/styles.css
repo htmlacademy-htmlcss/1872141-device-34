@@ -66,9 +66,26 @@ body {
   top: -21px;
 }
 
-.logo img{
+.logo {
   display: block;
   margin: 0;
+  width: 145px;
+  height: 36px;
+}
+
+.logo:focus {
+  box-shadow: inset 0 0 0 2px rgba(175, 79, 255, 1);
+  outline: none;
+}
+
+.logo:hover {
+  opacity: 60%;
+}
+
+.logo:active {
+  opacity: 30%;
+  outline: none;
+  box-shadow: none;
 }
 
 .page_header ul {
@@ -179,7 +196,7 @@ body {
   text-align: end;
 }
 
-/* Пока сделал так, но скорее всего нужно будет в дальнейшем выносить певый li с ссылкой на страницу каталога из списка */
+/* Пока сделал так, но скорее всего нужно будет в дальнейшем выносить первый li с ссылкой на страницу каталога из списка */
 .navigation_menu_item:last-child,
 .navigation_menu_item:nth-child(5n) {
   margin-right: 0;
@@ -363,7 +380,7 @@ body {
   margin: 0;
 }
 
-.index_benefits_item {
+.index_benefits_item p{
   color: #444444;
 }
 
@@ -511,6 +528,28 @@ body {
   z-index: -1;
 }
 
+.about-us_link:focus,
+.about-shop_link:focus {
+  box-shadow: inset 0 0 0 2px rgba(175, 79, 255, 1);
+  outline: none;
+}
+
+.about-us_link:hover,
+.about-shop_link:hover {
+  background-color: #FFE17F;;
+}
+
+.about-us_link:active,
+.about-shop_link:active {
+  background-color: #FFCC33;
+  outline: none;
+  box-shadow: none;
+}
+
+.about-us_link:disabled {
+  opacity: 0.3;
+}
+
 .contacts_wrapper {
   width: 532px;
   position: relative;
@@ -569,6 +608,9 @@ body {
   position: relative;
   text-align: center;
 }
+.contacts_link_shadow {
+  width: 259px;
+}
 
 /*Рассылка*/
 
@@ -621,6 +663,31 @@ body {
   padding: 0;
 }
 
+/* Если применять outline вместо box-shadow, когда нам нужна обводка снаружи, эффект будет такой же. Или я чего-то не понял и нужно именно тенью обводку задавать? */
+.email_button:focus {
+  outline: rgba(175, 79, 255, 1) solid 2px;
+}
+
+.email_button:hover {
+  background-color: #000000;
+  border: none;
+}
+
+.email_button:hover strong{
+  color: white;
+}
+
+.email_button:active {
+  background-color: #000000;
+  border: none;
+  outline: none;
+}
+
+.email_button:active strong{
+  color: white;
+  opacity: 0.3;
+}
+
 .email_button strong{
   font-family: "raleway", sans-serif;
   font-weight: 800;
@@ -661,13 +728,24 @@ body {
 }
 
 .footer_logo {
+  display: block;
   margin-top: 62px;
   margin-bottom: 35px;
+  width: 145px;
+  height: 36px;
 }
 
-.footer_logo a {
-  display: block;
-  margin: 0;
+.footer_logo:focus {
+  outline: rgba(175, 79, 255, 1) solid 2px;
+}
+
+.footer_logo:hover {
+  opacity: 0.6;
+}
+
+.footer_logo:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .footer_address {
@@ -838,11 +916,29 @@ body {
   position: relative;
 }
 
+.bread-crumbs_item a:focus {
+  position: relative;
+  box-shadow: inset 0 0 0 2px rgba(175, 79, 255, 1);
+  outline: none;
+}
+
+.bread-crumbs_item a:hover {
+  position: relative;
+  opacity: 60%;
+}
+
+.bread-crumbs_item a:active {
+  position: relative;
+  opacity: 30%;
+  outline: none;
+  box-shadow: none;
+}
+
 .bread-crumbs_icon {
   position: absolute;
   right: -20px;
   top: 12px;
-  fill: #000000;
+  fill: grey;
 }
 
 .main_background_container {
