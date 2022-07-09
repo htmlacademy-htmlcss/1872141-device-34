@@ -322,6 +322,13 @@ body {
   width: 160px;
   height: 60px;
   padding-top: 192px;
+  position: relative;
+}
+
+.index_category_icon {
+  position: absolute;
+  top: 0;
+  background-color: #ffe17f;
 }
 
 /*Слайдер преимуществ магазина*/
@@ -370,10 +377,11 @@ body {
 
 .delivery_wrapper {
   width: 1160px;
-  height: 110px;
+  height: 100px;
   display: flex;
   margin: 70px auto;
   background-color: #f0f0f0;
+  position: relative;
 }
 
 .delivery {
@@ -384,6 +392,42 @@ body {
   text-transform: uppercase;
   align-self: center;
   margin: 0 auto;
+}
+
+.delivery_icon {
+  background-color: #ffe17f;
+  box-shadow: 0 0 0 0 0 tomato;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.delivery_truck_block {
+  display: block;
+  position: absolute;
+  width: 125px;
+  height: 100px;
+  background-color: #ffe17f;
+}
+
+.delivery_truck_icon {
+  margin: 35px 39px;
+}
+
+.delivery_information_block {
+  display: block;
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  right: 42px;
+  top: 30px;
+  border: 1px solid rgba(220, 220, 220, 0.5);
+  border-radius: 50% 50%;
+  background-color: rgba(220, 220, 220, 0.5);
+}
+
+.delivery_information_icon {
+  margin: 14px 18px;
 }
 
 .delivery_line_list {
@@ -411,6 +455,7 @@ body {
 .about-us_wrapper {
   width: 520px;
   margin-right: 108px;
+  position: relative;
 }
 
 .about-us {
@@ -423,6 +468,27 @@ body {
   color: #444444;
 }
 
+.delivery_line_list {
+  padding-left: 36px;
+  list-style-type: none;
+}
+
+.delivery_line_item {
+  position: relative;
+}
+
+.delivery_line_item::before {
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #ffe17f;
+  border: 1px solid #ffe17f;
+  border-radius: 50% 50%;
+}
+
 .about-us_link {
   font-family: "raleway", sans-serif;
   font-weight: 800;
@@ -432,10 +498,29 @@ body {
   width: 258px;
   height: 20px;
   padding: 10px 6px;
+  position: relative;
+  text-align: center;
+}
+
+.about-us_link_shadow {
+  position: absolute;
+  content: "";
+  width: 270px;
+  height: 8px;
+  top: 16px;
+  left: 0;
+  z-index: -1;
 }
 
 .contacts_wrapper {
   width: 532px;
+  position: relative;
+}
+
+.about-shop_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .contacts {
@@ -482,6 +567,8 @@ body {
   height: 20px;
   padding: 10px 6px;
   margin-bottom: 70px;
+  position: relative;
+  text-align: center;
 }
 
 /*Рассылка*/
@@ -549,6 +636,13 @@ body {
   padding: 13px 0 14px;
   margin-bottom: 56px;
   text-align: end;
+  position: relative;
+}
+
+.free_tick-big {
+  position: absolute;
+  top: 20px;
+  left: 0;
 }
 
 /*Футер*/
