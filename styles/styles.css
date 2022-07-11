@@ -770,6 +770,11 @@ body {
   border-bottom: 3px solid #c4c4c4;
   margin-bottom: 56px;
   position: relative;
+  color: #444444
+}
+
+.mailing-list_form input::placeholder {
+  color: rgba(68, 68, 68, 0.5)
 }
 
 .email_icon {
@@ -777,8 +782,7 @@ body {
   top: 21px;
   left: 537px;
 }
-/* Не могу сообразить как реализовать для этого поля ввода пункт из стайлгайда - "Введённый текст"
-И надо ли реализовывать стиль для - "Неактивное" */
+
 .mailing-list_form input:focus {
   outline: #AF4FFF solid 2px;
   outline-offset: 2px;
@@ -788,6 +792,14 @@ body {
   background-color: #dcdcdc;
 }
 
+.mailing-list_form input:invalid {
+  border-bottom: 3px solid #FF3D3D;
+  outline: #FF3D3D solid 2px;
+}
+
+.mailing-list_form input:disabled {
+  opacity: 0.3;
+}
 
 .email_button {
   width: 253px;
@@ -819,6 +831,10 @@ body {
 
 .email_button:active strong{
   color: white;
+  opacity: 0.3;
+}
+
+.email_button:disabled {
   opacity: 0.3;
 }
 
@@ -1219,19 +1235,23 @@ body {
   height: 30px;
   margin: auto 0;
 }
-/* Нужно ли делать фон белым? На макете страницы он серый, а в стайлгайде белый... */
+
 .select_control:focus {
   outline: #AF4FFF solid 2px;
   outline-offset: 2px;
 }
-/* Нужно ли делать фон белым? На макете страницы он серый, а в стайлгайде белый... */
+
 .select_control:hover {
   opacity: 0.6;
 }
-/* Нужно ли делать фон белым? На макете страницы он серый, а в стайлгайде белый... */
+
 .select_control:active {
   opacity: 0.3;
   outline: none;
+}
+
+.select_control:disabled {
+  opacity: 0.1;
 }
 
 .sort-up_arrows_wrapper {
@@ -1390,7 +1410,6 @@ body {
   outline: none;
 }
 
-/* Нужно ли убирать обводку при отключенной кнопке? */
 .pagination_show-more:disabled {
   opacity: 0.3;
 }
