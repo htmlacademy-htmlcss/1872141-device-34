@@ -1221,7 +1221,7 @@ body {
 }
 
 .select_control {
-  background-color: #f0f0f0;
+  background-color: transparent;
   width: 141px;
   border: none;
   height: 30px;
