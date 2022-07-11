@@ -62,8 +62,7 @@ body {
 }
 
 .page_header_container {
-  position: absolute;
-  top: -21px;
+  transform: translateY(-21px);
 }
 
 .logo {
