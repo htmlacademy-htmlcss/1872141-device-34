@@ -74,8 +74,8 @@ body {
 }
 
 .logo:focus {
-  box-shadow: inset 0 0 0 2px rgba(175, 79, 255, 1);
-  outline: none;
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .logo:hover {
@@ -85,7 +85,6 @@ body {
 .logo:active {
   opacity: 30%;
   outline: none;
-  box-shadow: none;
 }
 
 .page_header ul {
@@ -129,6 +128,7 @@ body {
   padding-left: 48px;
   background-color: #ffe17f;
   border: 2px solid #000000;
+  border-right: 1px solid #000000;
   border-radius: 50px 0 0 50px;
 }
 
@@ -138,7 +138,7 @@ body {
   background-color: #ffe17f;
   border: 2px solid #000000;
   border-radius:  0 50px 50px 0;
-  border-left: none;
+  border-left: 1px solid #000000;
 }
 
 .header_menu_log-in {
@@ -181,9 +181,26 @@ body {
   min-width: 83px;
 }
 
+.navigation_menu_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1040px;
+  min-height: 50px;
+  margin: 0;
+}
+
+/* Усреднил расстояние между элементами списка до 49px */
+.navigation_menu_item {
+  min-width: 128px;
+  margin-right: 49px;
+  display: flex;
+  align-items: center;
+}
+
 .navigation_user_item a:focus,
 .navigation_menu_item:not(:first-child) a:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .navigation_user_item a:hover,
@@ -197,19 +214,10 @@ body {
   opacity: 0.3;
 }
 
-.navigation_menu_list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1040px;
-  height: 50px;
-  margin: 0;
-}
-
 .navigation_menu_item:first-child {
   width: 293px;
   margin-right: auto;
   display: block;
-  padding: 15px 0;
   position: relative;
 }
 
@@ -225,23 +233,21 @@ body {
   opacity: 0.3;
 }
 
-/* Видимо я запутался и нагородил тут всякого, но не могу сообразить как реализовать легче состояния для первого li в списке.
-Возможно это сделать проще, если вынести первый li в другой(собственный) список. */
 .navigation_menu_item:first-child a {
   display: block;
   height: 50px;
-  margin-top: -15px;
   position: relative;
 }
 
 .navigation_menu_item strong {
   box-sizing: border-box;
   position: absolute;
-  top: 15px;
+  padding-top: 15px;
 }
 
 .navigation_menu_item:first-child a:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .navigation_menu_icon:hover {
@@ -253,20 +259,10 @@ body {
   opacity: 1;
 }
 
-/* Усреднил расстояние между элементами списка до 49px */
-.navigation_menu_item {
-  min-width: 128px;
-  display: block;
-  padding: 15px 0;
-  margin-right: 49px;
-  margin-bottom: 20px;
-}
-
 .navigation_menu_item:last-child {
   text-align: end;
 }
 
-/* Пока сделал так, но скорее всего нужно будет в дальнейшем выносить первый li с ссылкой на страницу каталога из списка */
 .navigation_menu_item:last-child,
 .navigation_menu_item:nth-child(5n) {
   margin-right: 0;
@@ -279,6 +275,7 @@ body {
 
 .header_search_form input:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
   z-index: 1;
 }
 
@@ -294,8 +291,7 @@ body {
 
 .search_button:focus {
   outline: #AF4FFF solid 2px;
-  box-shadow: inset 2px 0 0 0 #000000;
-  z-index: 1;
+  outline-offset: 2px;
 }
 
 .search_button:hover {
@@ -308,7 +304,7 @@ body {
   color: #ffffff;
   outline: none;
 }
-/* Не знаю в каких случаях бывают неактивны данные кнопки и нужно ли им прописывать псевдокласс disabled... */
+
 .search_button:disabled {
   opacity: 0.3;
 }
@@ -451,7 +447,7 @@ body {
 
 .index_category_item a {
   display: block;
-  height: 60px;
+  min-height: 60px;
   width: 160px;
   padding-top: 193px;
   position: absolute;
@@ -460,6 +456,7 @@ body {
 
 .index_category_item a:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .index_category_item:hover .index_category_icon {
@@ -555,6 +552,7 @@ body {
 
 .delivery:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .delivery:hover .delivery_truck_icon {
@@ -649,8 +647,7 @@ body {
 
 .about-us_link:focus,
 .about-shop_link:focus {
-  box-shadow: inset 0 0 0 2px rgba(175, 79, 255, 1);
-  outline: none;
+  outline: #AF4FFF solid 2px;
 }
 
 .about-us_link:hover,
@@ -662,7 +659,6 @@ body {
 .about-shop_link:active {
   background-color: #FFCC33;
   outline: none;
-  box-shadow: none;
 }
 
 .about-us_link:disabled {
@@ -785,6 +781,7 @@ body {
 И надо ли реализовывать стиль для - "Неактивное" */
 .mailing-list_form input:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .mailing-list_form input:hover {
@@ -800,9 +797,9 @@ body {
   padding: 0;
 }
 
-/* Если применять outline вместо box-shadow, когда нам нужна обводка снаружи, эффект будет такой же. Или я чего-то не понял и нужно именно тенью обводку задавать? */
 .email_button:focus {
   outline: rgba(175, 79, 255, 1) solid 2px;
+  outline-offset: 2px;
 }
 
 .email_button:hover {
@@ -874,6 +871,7 @@ body {
 
 .footer_logo:focus {
   outline: rgba(175, 79, 255, 1) solid 2px;
+  outline-offset: 2px;
 }
 
 .footer_logo:hover {
@@ -926,11 +924,12 @@ body {
 
 .footer_social_list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   list-style-type: none;
   justify-content: center;
   margin: 0;
-  margin-bottom: 61px;
+  margin-bottom: 51px;
 }
 
 .footer_social_item {
@@ -940,16 +939,18 @@ body {
   border-radius: 50% 50%;
   background-color: rgba(255, 255, 255, 0.3);
   position: relative;
+  margin-bottom: 10px;
 }
 
-.footer_social_item:last-child {
-  margin-right: 15px;
+.footer_social_item:last-child,
+.footer_social_item:nth-child(8n) {
+  margin-right: 0;
 }
 
 .footer_social_item a {
-  display: block;
-  width: 40px;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer_social_vk {
@@ -972,6 +973,7 @@ body {
 
 .footer_social_item a:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .footer_social_item:hover {
@@ -1038,6 +1040,7 @@ body {
 
 .footer_htmlacademy_link:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .footer_htmlacademy_link:hover .footer_htmlacademy_logo {
@@ -1056,6 +1059,7 @@ body {
 .footer_navigation_list a:focus,
 .footer_phone:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .footer_navigation_item a:hover,
@@ -1130,8 +1134,8 @@ body {
 
 .bread-crumbs_item a:focus {
   position: relative;
-  box-shadow: inset 0 0 0 2px rgba(175, 79, 255, 1);
-  outline: none;
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .bread-crumbs_item a:hover {
@@ -1143,7 +1147,6 @@ body {
   position: relative;
   opacity: 30%;
   outline: none;
-  box-shadow: none;
 }
 
 .bread-crumbs_icon {
@@ -1219,6 +1222,7 @@ body {
 /* Нужно ли делать фон белым? На макете страницы он серый, а в стайлгайде белый... */
 .select_control:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 /* Нужно ли делать фон белым? На макете страницы он серый, а в стайлгайде белый... */
 .select_control:hover {
@@ -1251,6 +1255,7 @@ body {
 
 .sort-up_arrows:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .sort-up_arrows:hover .sort-up_arrow_icon {
@@ -1342,6 +1347,7 @@ body {
 
 .product-card_link:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 /* Не могу понять какое значение opacity для hover и для active нужно выставить, чтобы соответствовало макету. */
@@ -1371,6 +1377,7 @@ body {
 
 .pagination_show-more:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
 }
 
 .pagination_show-more:hover {
@@ -1435,6 +1442,7 @@ body {
 
 .pagination_link:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
   background-color: #f0f0f0;
 }
 
@@ -1455,6 +1463,7 @@ body {
 .pagination_prev:focus,
 .pagination_next:focus {
   outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
   background-color: #f0f0f0;
 }
 
