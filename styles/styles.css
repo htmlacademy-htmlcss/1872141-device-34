@@ -1089,9 +1089,9 @@ body {
 /* Дополнения в хэдер страницы каталога */
 
 .user-name {
-  width: 146px;
+  width: 149px;
   margin-left: 25px;
-  margin-right: 28px;
+  margin-right: 25px;
   display: block;
   padding-left: 0;
   padding-right: 0;
