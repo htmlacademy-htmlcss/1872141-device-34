@@ -256,9 +256,10 @@ body {
 .navigation_menu_item:last-child {
   text-align: end;
 }
-
+/* Или не нужно рассматривать переполнение на более чем два ряда в нашем случае? */
 .navigation_menu_item:last-child,
-.navigation_menu_item:nth-child(5n) {
+.navigation_menu_item:nth-child(5),
+.navigation_menu_item:nth-child(6n+11) {
   margin-right: 0;
 }
 
