@@ -1370,7 +1370,6 @@ body {
   outline-offset: 2px;
 }
 
-/* Не могу понять какое значение opacity для hover и для active нужно выставить, чтобы соответствовало макету. */
 .product-card_link:hover {
   opacity: 0.8;
 }
